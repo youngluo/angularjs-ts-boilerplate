@@ -1,22 +1,31 @@
 let gulp = require('gulp'),
-    util = require('gulp-util'),
+    $ = require('gulp-load-plugins')(),
     rollup = require('rollup-stream'),
-    source = require('vinyl-source-stream')
+    source = require('vinyl-source-stream'),
+    parsePath = require('parse-filepath')
 
-let production = !!util.env.prod,
-    config = {
+let production = !!$.util.env.prod,
+    gulpConfig = {
         buildFolder: 'build'
     },
     rollupConfig = require('./rollup.config')(production)
 
 gulp.task('rollup', function () {
-    let = rollupConfig = Object.assign({}, rollupConfig, { entry: 'src/index.js' })
+    let paths = gulpPaths('src/index.js'),
+        config = Object.assign({}, rollupConfig, { entry: paths.src })
 
-    return rollup(rollupConfig)
-        .pipe(source('index.js'))
-        .pipe(gulp.dest('build'))
+    return rollup(config)
+        .pipe(source(paths.name))
+        .pipe(gulp.dest(gulpConfig.buildFolder))
 })
 
-function gulpPaths() {
+gulp.task('default', $.sequence('rollup'))
 
+function gulpPaths(path) {
+    let segments = parsePath(path)
+
+    return {
+        name: segments.basename,
+        src: segments.path
+    }
 }
