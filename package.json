@@ -1,24 +1,26 @@
 {
-  "devDependencies": {
-    "babel-preset-es2015-rollup": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-sequence": "^0.4.6",
-    "gulp-util": "^3.0.8",
-    "parse-filepath": "^1.0.1",
-    "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^7.0.0",
-    "rollup-plugin-conditional": "^1.1.1",
-    "rollup-plugin-hash": "^1.2.0",
-    "rollup-plugin-html": "^0.2.1",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-scss": "^0.2.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "rollup-stream": "^1.19.0",
-    "vinyl-source-stream": "^1.1.0"
+  "name": "angular1.6-es6-webpack2",
+  "version": "1.0.0",
+  "description": "angular1.6-es6-webpack2",
+  "main": "",
+  "scripts": {
+    "test": "",
+    "prod": "rm -rf dist && webpack --config webpack.config.prod.js --progress --colors"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngluo/angular1.6-es6-webpack2.git"
+  },
+  "author": "youngluo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngluo/angular1.6-es6-webpack2/issues"
+  },
+  "homepage": "https://github.com/youngluo/angular1.6-es6-webpack2#readme",
   "dependencies": {
     "angular": "1.6.1"
+  },
+  "devDependencies": {
+    "webpack": "^2.5.1"
   }
 }
