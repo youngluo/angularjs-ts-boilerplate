@@ -1,13 +1,8 @@
-import angular from 'angular'
+import angular = require('angular')
+import routes from './config/routes.config'
 
 angular.module('app', [
-
+    // 'ui.router'
 ])
 
-
-
-angular.bootstrap(document, 'app')
-
-if (module.hot) {
-    module.hot.accept()
-}
+angular.bootstrap(document, ["app"])

@@ -13,10 +13,7 @@ const ROOT_PATH = path.resolve(__dirname), //项目根目录
 module.exports = {
     devtool: 'source-map',
     entry: {
-        app: [
-            'webpack-hot-middleware/client',
-            ENTRY_FILE
-        ]
+        app: ENTRY_FILE
     },
     output: {
         path: BUILD_PATH, //编译到当前目录
@@ -68,7 +65,15 @@ module.exports = {
             {
                 test: /\.ts$/,
                 exclude: NODE_MODULES_PATH,
-                use: ['ts-loader'],
+                use: [
+                    'ts-loader',
+                    // {
+                    //     loader: 'tslint-loader',
+                    //     options: {
+                    //         configFile: ROOT_PATH + '/tslint.json'
+                    //     }
+                    // }
+                ],
                 include: APP_PATH
             }
         ]
@@ -76,6 +81,7 @@ module.exports = {
     devServer: {
         hot: true,
         contentBase: BUILD_PATH,
+        port: 3000,
         publicPath: '/'
     },
     plugins: [
