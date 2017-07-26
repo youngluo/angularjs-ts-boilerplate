@@ -8,3 +8,13 @@ h1 {
     width: 500px;
     margin: 0 auto;
 }
+
+.tabs {
+    display: table;
+    padding: 0;
+    list-style: none;
+    li {
+        display: table-cell;
+        padding: 8px;
+    }
+}

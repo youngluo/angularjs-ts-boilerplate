@@ -1,9 +1,13 @@
-const routes = [
-    {
-        name: 'root',
-        url: '/',
-        component: ''
-    }
+const routePathes = [
+    'home'
 ]
 
-export default routes
+const routes = routePathes.map(path => require(`../pages/${path}/route`).default)
+
+console.log(routes)
+
+function routerRegister() {
+
+}
+
+export default routerRegister
