@@ -24,6 +24,17 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.html$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        exportAsEs6Default: true,
+                        minimize: true,
+                        removeComments: true
+                    }
+                }
+            },
+            {
                 test: /\.css$/,
                 exclude: NODE_MODULES_PATH,
                 use: ExtractTextPlugin.extract(['css-loader', 'autoprefixer-loader']),
