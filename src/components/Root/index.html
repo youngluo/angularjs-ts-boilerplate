@@ -1,12 +1,12 @@
 <div class="root">
-    <h1>用typescript开发angular1</h1>
+    <h1>用typescript开发angularjs</h1>
     <ul class="tabs">
         <li>
-            <a ui-sref="todolist">todo list</a>
+            <a ui-sref="home" ui-sref-active="active">home</a>
         </li>
         <li>
-            <a ui-sref="demo">demo</a>
+            <a ui-sref="todolist" ui-sref-active="active">todo list</a>
         </li>
     </ul>
-    <ui-view></ui-view>
+    <div ui-view class="view"></div>
 </div>

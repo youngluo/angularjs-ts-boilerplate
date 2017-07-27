@@ -11,10 +11,22 @@ h1 {
 
 .tabs {
     display: table;
-    padding: 0;
-    list-style: none;
     li {
         display: table-cell;
         padding: 8px;
+        a {
+            &:hover {
+                color: #108ee9;
+            }
+            &.active {
+                color: #108ee9;
+            }
+        }
     }
+}
+
+.view {
+    min-height: 300px;
+    padding: 10px;
+    border: solid 1px #ccc;
 }

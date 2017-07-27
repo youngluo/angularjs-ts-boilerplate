@@ -1,3 +1,19 @@
 body {
     margin: 0;
+    color: rgba(0, 0, 0, .65);
+    font-size: 14px;
+}
+
+a {
+    color: rgba(0, 0, 0, .65);
+    text-decoration: none;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+input {
+    outline: none;
 }

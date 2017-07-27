@@ -1,0 +1,38 @@
+.todo-list {
+    .input {
+        box-sizing: border-box;
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 5px 8px;
+        background-color: #fff;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        transition: all .3s;
+    }
+    @at-root {
+        .todos-type {
+            display: table;
+            margin: 0 auto;
+            li {
+                display: table-cell;
+                padding: 3px 8px;
+                cursor: pointer;
+                &:hover {
+                    color: #108ee9;
+                }
+                &.active {
+                    color: #108ee9;
+                }
+            }
+        }
+        .todos {
+            width: 200px;
+            margin: 0 auto;
+            li {
+                line-height: 1.8;
+                cursor: pointer;
+            }
+        }
+    }
+}

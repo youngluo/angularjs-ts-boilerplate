@@ -1,5 +1,6 @@
-class Home {
+import html from './index.html'
+import './index.scss'
 
+export default {
+    template: html
 }
-
-export default new Home

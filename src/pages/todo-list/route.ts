@@ -1,5 +1,5 @@
 export default {
     name: 'todolist',
     url: '/todolist',
-    component: ''
+    component: 'todolist'
 }
