@@ -1,9 +1,15 @@
 export default class TodoListCtrl {
+	static $inject = ['log']
+
 	todos = []
 	id = 0
 	todo: string
 	todoTypes = ['All', 'Todo', 'Done']
 	visibleType = 'All'
+
+	constructor(private log) {
+		this.log.info('info')
+	}
 
 	handleSubmit(e): void {
 		if (e.keyCode !== 13) {
