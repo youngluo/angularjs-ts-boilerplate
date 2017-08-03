@@ -1,10 +1,10 @@
 # 用typescript开发AngularJS应用
 
-> 考虑到一些老的项目仍使用AngularJS 1.x开发，而Angular 2.0+优先使用typescript开发，所以我打算使用typescript来开发AngularJS 1.x的应用，以期望能稍微降低以后的迁移成本。 
+> 考虑到一些老的项目仍在使用AngularJS 1.x开发，而Angular 2+优先使用typescript开发，所以打算使用typescript来开发AngularJS 1.x的应用，希望能够对以后升级到Angular 2+有所帮助。 
 
-其实使用typescript开发的难度并不是很大，因为代码最终都会编译成ES5的代码，更好的是我们可以使用一些更舒服的语法来进行开发。这篇文章主要介绍了在代码实践部分的一些心得。
+其实使用typescript开发和使用ES6开发基本是一致的，关键是我们可以使用新的特性、更简洁的语法来进行代码层面的优化。这篇文章主要介绍了在代码实践方面的一些心得。
 
-## 模块机制
+## 模块
 
 我们可以将各个功能模块进行分组，使用一个包含`.module()`的外壳来进行包装，把module的name属性export出去。
 
@@ -162,6 +162,7 @@ import angular = require('angular')
 ## 参考文章
 
 - [Angular 1.x和ES6的结合](https://github.com/xufei/blog/issues/29)
+- [AngularJS 1.x with TypeScript (or ES6) Best Practices](https://codepen.io/martinmcwhorter/post/angularjs-1-x-with-typescript-or-es6-best-practices)
 
 
 
