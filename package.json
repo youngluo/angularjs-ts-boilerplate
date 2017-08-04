@@ -1,46 +1,46 @@
 {
-	"name": "angular1.x-ts-webpack2",
-	"version": "1.0.0",
-	"description": "angular1.x-ts-webpack2",
-	"main": "",
-	"scripts": {
-		"test": "",
-		"dev": "webpack-dev-server --config webpack.config.dev.js --hot --open",
-		"prod": "rm -rf dist && webpack --config webpack.config.prod.js --progress --colors"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/youngluo/angular1.x-ts-webpack2.git"
-	},
-	"author": "youngluo",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/youngluo/angular1.x-ts-webpack2/issues"
-	},
-	"homepage": "https://github.com/youngluo/angular1.x-ts-webpack2#readme",
-	"dependencies": {
-		"@uirouter/angularjs": "^1.0.5",
-		"angular": "1.6.1"
-	},
-	"devDependencies": {
-		"@types/angular": "^1.6.27",
-		"autoprefixer-loader": "^3.2.0",
-		"css-loader": "^0.28.4",
-		"extract-text-webpack-plugin": "^2.1.2",
-		"file-loader": "^0.11.2",
-		"html-loader": "^0.4.5",
-		"html-webpack-plugin": "^2.29.0",
-		"less": "^2.7.2",
-		"less-loader": "^4.0.5",
-		"node-sass": "^4.5.3",
-		"sass-loader": "^6.0.6",
-		"style-loader": "^0.18.2",
-		"ts-loader": "^2.3.1",
-		"tslint": "^5.5.0",
-		"tslint-loader": "^3.5.3",
-		"typescript": "^2.4.2",
-		"url-loader": "^0.5.9",
-		"webpack": "^2.5.1",
-		"webpack-dev-server": "^2.6.1"
-	}
+  "name": "angular1.x-ts-webpack2",
+  "version": "1.0.0",
+  "description": "angular1.x-ts-webpack2",
+  "main": "",
+  "scripts": {
+    "test": "",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --hot --open",
+    "prod": "rm -rf dist && webpack --config webpack.config.prod.js --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngluo/angular1.x-ts-webpack2.git"
+  },
+  "author": "youngluo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/youngluo/angular1.x-ts-webpack2/issues"
+  },
+  "homepage": "https://github.com/youngluo/angular1.x-ts-webpack2#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.5",
+    "angular": "1.6.1"
+  },
+  "devDependencies": {
+    "@types/angular": "^1.6.27",
+    "autoprefixer-loader": "^3.2.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.1",
+    "tslint": "^5.5.0",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.6.1"
+  }
 }

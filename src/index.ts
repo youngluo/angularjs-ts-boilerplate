@@ -9,16 +9,16 @@ import pages from './pages'
 import filters from './filters'
 
 angular
-	.module('app', [
-		uiRouter,
-		components,
-		pages,
-		filters
-	])
-	.config(router)
+  .module('app', [
+    uiRouter,
+    components,
+    pages,
+    filters
+  ])
+  .config(router)
 
 angular.bootstrap(document, ['app'])
 
 if (module.hot) {
-	module.hot.accept()
+  module.hot.accept()
 }

@@ -1,9 +1,9 @@
 <div class="todo-list">
-    <ul class="todos-type">
-        <li ng-repeat="type in $ctrl.todoTypes" ng-click="$ctrl.toggleType(type)" ng-class="{active:type===$ctrl.visibleType}">{{ type }}</li>
-    </ul>
-    <input type="text" class="input" ng-model="$ctrl.todo" ng-keyup="$ctrl.handleSubmit($event)" />
-    <ul class="todos">
-        <li ng-repeat="todo in $ctrl.todos | todosVisible:$ctrl.visibleType" ng-click="$ctrl.toggleTodo(todo)" ng-style="{textDecoration: todo.complete ? 'line-through' : 'none'}">{{ todo.text }}</li>
-    </ul>
+  <ul class="todos-type">
+    <li ng-repeat="type in $ctrl.todoTypes" ng-click="$ctrl.toggleType(type)" ng-class="{active:type===$ctrl.visibleType}">{{ type }}</li>
+  </ul>
+  <input type="text" class="input" ng-model="$ctrl.todo" ng-keyup="$ctrl.handleSubmit($event)" />
+  <ul class="todos">
+    <li ng-repeat="todo in $ctrl.todos | todosVisible:$ctrl.visibleType" ng-click="$ctrl.toggleTodo(todo)" ng-style="{textDecoration: todo.complete ? 'line-through' : 'none'}">{{ todo.text }}</li>
+  </ul>
 </div>

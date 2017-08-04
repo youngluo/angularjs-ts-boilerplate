@@ -3,6 +3,6 @@ import html from './index.html'
 import './index.scss'
 
 export default {
-	template: html,
-	controller: ctrl
+  template: html,
+  controller: ctrl
 }

@@ -61,7 +61,7 @@ export default angular
     .name
 ```
 
-组件的定义我是直接将配置项导出，把html模板文件和controller分离到单独的文件中进行开发；一个完整的组件还得需要管理自己的样式，我们可以将它import进来，和模板文件一样通过webpack来进行打包管理。
+组件的定义我是直接将配置项导出，把html模板文件和controller分离到单独的文件中进行开发；一个完整的组件还需要管理自己的样式，我们可以将它import进来，和模板文件一起通过webpack来进行打包管理。
 
 ## controller和service
 
