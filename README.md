@@ -1,6 +1,6 @@
 # angularjs-ts-boilerplate
 
-A boilerplate using typescript to develop angularjs.
+A boilerplate using typescript to develop angularjs. [introduction](https://github.com/youngluo/angularjs-ts-boilerplate/blob/master/introduction.md)
 
 ## dependencies
 
