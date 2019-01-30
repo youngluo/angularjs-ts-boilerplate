@@ -6,7 +6,7 @@ A boilerplate using typescript to develop angularjs. [introduction](https://gith
 
 - angularjs 1.5+
 - ui-router 1.0+
-- webpack 2.0+
+- webpack 4.0+
 
 ## usage
 

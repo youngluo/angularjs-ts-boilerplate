@@ -1,32 +1,32 @@
 h1 {
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
 }
 
 .root {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .tabs {
-    display: table;
-    li {
-        display: table-cell;
-        padding: 8px;
-        a {
-            &:hover {
-                color: #108ee9;
-            }
-            &.active {
-                color: #108ee9;
-            }
-        }
+  display: table;
+  li {
+    display: table-cell;
+    padding: 8px;
+    a {
+      &:hover {
+        color: #108ee9;
+      }
+      &.active {
+        color: #108ee9;
+      }
     }
+  }
 }
 
 .view {
-    min-height: 300px;
-    padding: 10px;
-    border: solid 1px #ccc;
+  min-height: 300px;
+  padding: 10px;
+  border: solid 1px #ccc;
 }
