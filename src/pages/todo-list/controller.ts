@@ -8,7 +8,7 @@ export default class TodoListCtrl {
   visibleType = 'All'
 
   constructor(private log) {
-    this.log.info('info')
+    this.log.info('Hello World!')
   }
 
   handleSubmit(e): void {

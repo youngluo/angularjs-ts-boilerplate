@@ -1,19 +1,22 @@
-let path = require('path'),
-  webpack = require('webpack'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin'), //css单独打包
-  HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const ROOT_PATH = path.resolve(__dirname), //项目根目录
-  APP_PATH = path.resolve(ROOT_PATH, 'src'), //项目源代码目录
-  BUILD_PATH = path.resolve(ROOT_PATH, 'dist'), //发布文件存放目录
-  NODE_MODULES_PATH = path.resolve(ROOT_PATH, 'node_modules'), //node_modules目录
-  ENTRY_FILE = path.resolve(APP_PATH, 'index'), //入口文件地址
-  TEMPLATE_FILE = path.resolve(APP_PATH, 'index.html'); //html模板文件地址
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const ROOT_PATH = path.resolve(__dirname); //项目根目录
+const APP_PATH = path.resolve(ROOT_PATH, 'src'); //项目源代码目录
+const BUILD_PATH = path.resolve(ROOT_PATH, 'dist'); //发布文件存放目录
+const NODE_MODULES_PATH = path.resolve(ROOT_PATH, 'node_modules'); //node_modules目录
+const ENTRY_FILE = path.resolve(APP_PATH, 'index'); //入口文件地址
+const TEMPLATE_FILE = path.resolve(APP_PATH, 'index.html'); //html模板文件地址
 
 module.exports = {
+  mode: 'development',
   devtool: 'source-map',
   entry: {
-    app: ENTRY_FILE
+    app: ENTRY_FILE,
+    vendor: [
+      "angular",
+      '@uirouter/angularjs'
+    ]
   },
   output: {
     path: BUILD_PATH, //编译到当前目录
@@ -37,17 +40,17 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: NODE_MODULES_PATH,
-        use: ExtractTextPlugin.extract(['css-loader', 'autoprefixer-loader']),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
         include: APP_PATH
       },
       {
         test: /\.less$/,
-        use: ExtractTextPlugin.extract(['css-loader', 'autoprefixer-loader', 'less-loader']),
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
       },
       {
         test: /\.scss$/,
         exclude: NODE_MODULES_PATH,
-        use: ExtractTextPlugin.extract(['css-loader', 'autoprefixer-loader', 'sass-loader']),
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
         include: APP_PATH
       },
       {
@@ -101,13 +104,34 @@ module.exports = {
       template: TEMPLATE_FILE, //html模板路径
       hash: false,
     }),
-    new ExtractTextPlugin({
-      filename: 'css/[name].[chunkhash:8].css',
-      allChunks: true
-    }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   ],
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          chunks: 'all',
+          minChunks: 2,
+          maxInitialRequests: 5,
+          minSize: 0,
+          name: 'common'
+        },
+        vendor: {
+          test: /node_modules/,
+          chunks: 'all',
+          name: 'vendor',
+          priority: 10,
+          enforce: true,
+          minChunks: 2
+        }
+      }
+    }
+  },
   resolve: {
     extensions: ['.js', '.ts', '.less', '.scss', '.css'], //后缀名自动补全
+    alias: {
+      '@': APP_PATH,
+    }
   }
 }
